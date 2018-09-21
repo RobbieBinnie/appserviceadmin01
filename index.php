@@ -9,7 +9,9 @@ echo "<br/><br/>";
 
 
 foreach (getallheaders() as $name => $value) {
-    echo "$name: $value <br/>";
+    if ($name == "X-MS-CLIENT-PRINCIPAL-NAME"){
+        echo "$name: $value <br/>";
+    }
 }
 
 
